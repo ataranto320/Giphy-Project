@@ -14,8 +14,8 @@ $.ajax({
     //div to hold sw thing
     var SwThing = $("<div class='sw'>");
 
-    // //storing the data 
-    // var data = response.Data;
+    //storing the data 
+    var data = response.Data;
 
     // // //creating an element to have things displayed
     // // var funFact = $("")
@@ -25,41 +25,44 @@ $.ajax({
 
     // //stroing things
 
-    // Creating an element to have the rating displayed
-    var pOne = $("<p>").text("Rating: " + rating);
+    // Creating an element to have the ships gif displayed
+    var gifOne = $("<p>").text("Ships: " + image);
 
-    // Displaying the rating
-    movieDiv.append(pOne);
+    // Displaying the gif
+    SwThing.append(gifOne);
 
-    // Storing the release year
-    var released = response.Released;
+    // Storing the gifs
+    var gifs = response.Gifs;
 
-    // Creating an element to hold the release year
-    var pTwo = $("<p>").text("Released: " + released);
+    // Creating an element to have the jedi gif displayed
+    var gifTwo = $("<p>").text("Jedi: " + image);
 
     // Displaying the release year
-    movieDiv.append(pTwo);
+    Swthing.append(gifTwo);
 
-    // Storing the plot
-    var plot = response.Plot;
+    // // Storing the plot
+    // var plot = response.Plot;
 
-    // Creating an element to hold the plot
-    var pThree = $("<p>").text("Plot: " + plot);
+    // Creating an element to have the sith gif diplayed
+    var gifThree = $("<p>").text("Sith: " + image);
 
     // Appending the plot
-    movieDiv.append(pThree);
+    SwThing.append(gifThree);
+
+    // Creating an element to have the bounty hunters gif displayed
+    var gifFour = $("<p>").text("Bounty Hunters " + image);
 
     // Retrieving the URL for the image
-    var imgURL = response.Poster;
+    var imgURL = response.Gif;
 
     // Creating an element to hold the image
     var image = $("<img>").attr("src", imgURL);
 
     // Appending the image
-    movieDiv.append(image);
+    SwThing.append(image);
 
-    // Putting the entire movie above the previous movies
-    $("#movies-view").prepend(movieDiv);
+    // Putting the gif above the previous gif
+    $("#starwars-view").prepend(SwThing);
   });
 
 }
