@@ -91,21 +91,21 @@ function renderButtons() {
   }
 }
 
-// This function handles events where a movie button is clicked
-$("#add-movie").on("click", function(event) {
+// This function handles events where a gif button is clicked
+$("#search").on("click", function(event) {
   event.preventDefault();
   // This line grabs the input from the textbox
-  var movie = $("#movie-input").val().trim();
+  var movie = $("#sw-input").val().trim();
 
-  // Adding movie from the textbox to our array
-  movies.push(movie);
+  // Adding a gif from the textbox to our array
+  things.push(thing);
 
-  // Calling renderButtons which handles the processing of our movie array
+  // Calling renderButtons which handles the processing of our things array
   renderButtons();
 });
 
-// Adding a click event listener to all elements with a class of "movie-btn"
-$(document).on("click", ".movie-btn", displayMovieInfo);
+// Adding a click event listener to all elements with a class of "star-wars-btn"
+$(document).on("click", ".star-wars-btn", displayStarWarsInfo);
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
