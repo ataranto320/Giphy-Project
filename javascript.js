@@ -1,10 +1,13 @@
 // array of star wars stuff
 var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
 
+// api key
+var apiKey = "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv"
+
 //display info function to show content 
 function displayStarWarsInfo(){
     var SW = $(this).attr("id");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + 1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv + "&apikey=trilogy";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + Search Term + "&api_key=" + 1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv + "&limit=10";
 
 //creating ajax
 $.ajax({
