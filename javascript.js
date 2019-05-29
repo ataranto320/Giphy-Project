@@ -1,5 +1,5 @@
 // array of star wars stuff
-var things = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
+var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
 
 //display info function to show content 
 function displayStarWarsInfo(){
@@ -75,7 +75,7 @@ function renderButtons() {
   $("#buttons-view").empty();
 
   // Looping through the array of gifs
-  for (var i = 0; i < things.length; i++) {
+  for (var i = 0; i < topics.length; i++) {
 
     // Then dynamicaly generating buttons for each gifs in the array
     // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
@@ -83,9 +83,9 @@ function renderButtons() {
     // Adding a class of star-wars-btn to our button
     a.addClass("star-wars-btn");
     // Adding a data-attribute
-    a.attr("id", things[i]);
+    a.attr("id", topics[i]);
     // Providing the initial button text
-    a.text(things[i]);
+    a.text(topics[i]);
     // Adding the button to the buttons-view div
     $("#buttons-view").append(a);
   }
@@ -98,7 +98,7 @@ $("#search").on("click", function(event) {
   var movie = $("#sw-input").val().trim();
 
   // Adding a gif from the textbox to our array
-  things.push(thing);
+  topics.push(topic);
 
   // Calling renderButtons which handles the processing of our things array
   renderButtons();
