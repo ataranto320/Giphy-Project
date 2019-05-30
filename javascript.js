@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 // array of star wars stuff
 var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
 
@@ -112,3 +114,4 @@ $(document).on("click", ".star-wars-btn", displayStarWarsInfo);
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
+}
