@@ -22,18 +22,10 @@ $.ajax({
     //storing the data 
     var data = response.Data;
 
-    // // //creating an element to have things displayed
-    // // var funFact = $("")
-
-    // //displaying SW things
-    // SwThing.append();
-
-    // //stroing things
-
     // Creating an element to have the ships gif displayed
     var gifOne = $("<p>").text("Ships: " + image);
 
-    // Displaying the gif
+    // Displaying the ships
     SwThing.append(gifOne);
 
     // Storing the gifs
@@ -42,7 +34,7 @@ $.ajax({
     // Creating an element to have the jedi gif displayed
     var gifTwo = $("<p>").text("Jedi: " + image);
 
-    // Displaying the release year
+    // Displaying the jedi
     Swthing.append(gifTwo);
 
     // // Storing the plot
@@ -51,11 +43,14 @@ $.ajax({
     // Creating an element to have the sith gif diplayed
     var gifThree = $("<p>").text("Sith: " + image);
 
-    // Appending the plot
+    // Appending the sith
     SwThing.append(gifThree);
 
     // Creating an element to have the bounty hunters gif displayed
     var gifFour = $("<p>").text("Bounty Hunters " + image);
+
+    // Appending the bounty hunters
+    SwThing.append(gifFour);
 
     // Retrieving the URL for the image
     var imgURL = response.Gif;
@@ -71,6 +66,8 @@ $.ajax({
   });
 
 }
+
+// animate and still for gif fucntions
 
 // Function for displaying gifs
 function renderButtons() {
