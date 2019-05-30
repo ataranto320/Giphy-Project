@@ -100,7 +100,7 @@ function renderButtons() {
 $("#search").on("click", function(event) {
   event.preventDefault();
   // This line grabs the input from the textbox
-  var movie = $("#sw-input").val().trim();
+  var topic = $("#sw-input").val().trim();
 
   // Adding a gif from the textbox to our array
   topics.push(topic);
