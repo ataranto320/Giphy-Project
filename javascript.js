@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
 // array of star wars stuff
 var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
@@ -7,9 +7,9 @@ var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
 var apiKey = "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv"
 
 //display info function to show content 
-function displayStarWarsInfo(){
-    var SW = $(this).attr("id");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=" + "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv" + "&limit=10";
+function displayStarWarsInfo(x){
+
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=" + "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv" + "&limit=10";
 
 //creating ajax
 $.ajax({
@@ -17,6 +17,11 @@ $.ajax({
     method: "GET"
 }).then(function(response) {
     //div to hold sw thing
+    console.log(response.data)
+
+    for(var k =0 ; k < response.data.length; k++){
+        console.log(response.data[k].images.original.url)
+    }
     var SwThing = $("<div class='sw'>");
 
     //storing the data 
@@ -35,7 +40,7 @@ $.ajax({
     var gifTwo = $("<p>").text("Jedi: " + image);
 
     // Displaying the jedi
-    Swthing.append(gifTwo);
+    SwThing.append(gifTwo);
 
     // // Storing the plot
     // var plot = response.Plot;
@@ -107,8 +112,13 @@ $("#search").on("click", function(event) {
 });
 
 // Adding a click event listener to all elements with a class of "star-wars-btn"
-$(document).on("click", ".star-wars-btn", displayStarWarsInfo);
+$(document).on("click", ".star-wars-btn", function(){
+    var character = $(this).text()
+
+    console.log(character)
+    displayStarWarsInfo(character)
+});
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
-}
+// })
