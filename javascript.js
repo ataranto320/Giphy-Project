@@ -21,6 +21,8 @@ $.ajax({
 
     for(var k =0 ; k < response.data.length; k++){
         console.log(response.data[k].images.original.url)
+        // $('#results').append(gifOne, gitTwo, gifThree, gifFour);
+        // $('#results').append(SwThing);
     }
     var SwThing = $("<div class='sw'>");
 
@@ -42,8 +44,11 @@ $.ajax({
     // Displaying the jedi
     SwThing.append(gifTwo);
 
-    // // Storing the plot
-    // var plot = response.Plot;
+    // Storing the plot
+    var plot = response.Plot;
+
+    // Storing the rating data
+    var rating = response.Rated;
 
     // Creating an element to have the sith gif diplayed
     var gifThree = $("<p>").text("Sith: " + image);
