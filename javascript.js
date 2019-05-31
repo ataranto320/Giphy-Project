@@ -23,6 +23,8 @@ $.ajax({
         console.log(response.data[k].images.original.url)
         // $('#results').append(gifOne, gitTwo, gifThree, gifFour);
         // $('#results').append(SwThing);
+        // SwThing();
+        // something needs to go within here to make the gifs appear on the screen and it has to do with the SwThing appends
     }
     var SwThing = $("<div class='sw'>");
 
@@ -77,7 +79,7 @@ $.ajax({
 
 }
 
-// animate and still for gif fucntions
+// animate and still for gif fucntions ...
 
 // Function for displaying gifs
 function renderButtons() {
@@ -112,7 +114,7 @@ $("#search").on("click", function(event) {
   // Adding a gif from the textbox to our array
   topics.push(topic);
 
-  // Calling renderButtons which handles the processing of our things array
+  // Calling renderButtons which handles the processing of our topics array
   renderButtons();
 });
 
