@@ -7,9 +7,9 @@ var topics = ["Ships", "Jedi", "Sith", "Bounty Hunters"];
 var apiKey = "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv"
 
 //display info function to show content 
-function displayStarWarsInfo(x){
+function displayStarWarsInfo(topic){
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=" + "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv" + "&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + "1XFs0hWuTTHZjLE2c02BWlTFYr80TUbv" + "&limit=10";
 
 //creating ajax
 $.ajax({
