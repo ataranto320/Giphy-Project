@@ -26,3 +26,75 @@ input{
 /* #search{
     float: right;
 } */
+
+@media screen and (max-width: 980px) {
+    [id="button-views"]{
+        width: 100%;
+    }
+    [class="sw"]{
+        width: 100%;
+    }
+    [id="results"]{
+        width: 100%;
+    }
+    [id="star-wars-form"]{
+        width: 100%;
+    }
+    [id="sw-input"]{
+        width: 100%;
+    }
+    [id="search"]{
+        width: 100%;
+    }
+    [id="starwars-view"]{
+        width: 100%
+    }
+ }
+ 
+ @media screen and (max-width: 768px) {
+    [id="button-views"]{
+        width: 100%;
+    }
+    [class="sw"]{
+        width: 100%;
+    }
+    [id="results"]{
+        width: 100%;
+    }
+    [id="star-wars-form"]{
+        width: 100%;
+    }
+    [id="sw-input"]{
+        width: 100%;
+    }
+    [id="search"]{
+        width: 100%;
+    }
+    [id="starwars-view"]{
+        width: 100%
+    }
+ }
+ 
+ @media screen and (max-width: 640px) {
+    [id="button-views"]{
+        width: 100%;
+    }
+    [class="sw"]{
+        width: 100%;
+    }
+    [id="results"]{
+        width: 100%;
+    }
+    [id="star-wars-form"]{
+        width: 100%;
+    }
+    [id="sw-input"]{
+        width: 100%;
+    }
+    [id="search"]{
+        width: 100%;
+    }
+    [id="starwars-view"]{
+        width: 100%
+    }
+ }
