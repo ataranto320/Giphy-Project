@@ -23,6 +23,10 @@ input{
     color: yellow;
 }
 
+#results{
+    color: yellow;
+}
+
 /* #search{
     float: right;
 } */
