@@ -18,10 +18,15 @@ $.ajax({
 }).then(function(response) {
     //div to hold sw thing
     console.log(response.data)
+    $("#results").empty();
 
-    for(var k =0 ; k < response.data.length; k++){
+    for(var k = 0 ; k < response.data.length; k++){
         console.log(response.data[k].images.original.url)
-        // $('#results').append(gifOne, gitTwo, gifThree, gifFour);
+        const gifUrl = response.data[k].images.original.url;
+        $("#results").prepend(`<p> ${topic}</p><img src="${gifUrl}">`)
+
+
+        // $('#results').append(gifOne, gifTwo, gifThree, gifFour);
         // $('#results').append(SwThing);
         // SwThing();
         // something needs to go within here to make the gifs appear on the screen and it has to do with the SwThing appends
@@ -32,7 +37,7 @@ $.ajax({
     var data = response.Data;
 
     // Creating an element to have the ships gif displayed
-    var gifOne = $("<p>").text("Ships: " + image);
+    var gifOne = `<p> Ship: <img src="${imgUrl}"/>`
 
     // Displaying the ships
     SwThing.append(gifOne);
@@ -53,7 +58,7 @@ $.ajax({
     var rating = response.Rated;
 
     // Creating an element to have the sith gif diplayed
-    var gifThree = $("<p>").text("Sith: " + image);
+    var gifThree = $("<p>").text("Sith: " + imgURL);
 
     // Appending the sith
     SwThing.append(gifThree);
@@ -87,10 +92,14 @@ function renderButtons() {
   // Deleting the gifs prior to adding new gifs
   // (this is necessary otherwise you will have repeat buttons)
   $("#buttons-view").empty();
+  // Function to empty out the results
+// function clear() {
+//   $("#results").empty();
+// }
 
+  
   // Looping through the array of gifs
   for (var i = 0; i < topics.length; i++) {
-
     // Then dynamicaly generating buttons for each gifs in the array
     // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
     var a = $("<button>");
@@ -104,6 +113,7 @@ function renderButtons() {
     $("#buttons-view").append(a);
   }
 }
+
 
 // This function handles events where a gif button is clicked
 $("#search").on("click", function(event) {
